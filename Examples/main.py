@@ -10,13 +10,13 @@ import micropython, machine, time
 #    lcd.circle(100, 100, 50, 0xFF8000)
 #    lcd.roundrect(160, 100, 80, 80, 10, lcd.BLACK) # Прямоугольник (горизонт, вертикаль, шир, выс, закругление углов, цвет, заливка)
     
-# Изменение цвета экрана по нажатию кнопки
+# Изменение цвета экрана по нажатию кнопки, точное время если есть соединение с сетью
 
 def clock():
     rtc = machine.RTC()
     print("Synchronize time from NTP server ...")
     lcd.println("Synchronize time from NTP server ...")
-    rtc.ntp_sync(server="ru.pool.ntp.org", tz="CET-3CEST,M3.5.0,M10.5.0/3")
+    rtc.ntp_sync(server="ru.pool.ntp.org", tz="CET-3CEST,M3.5.0,M10.5.0/3") # Часовой пояс меняется в CET-3CEST
     lcd.clear(lcd.BLUE)
     lcd.setColor(lcd.BLACK, lcd.BLUE)
     lcd.font(lcd.FONT_Comic, fixedwidth=True, dist=16, width=2)
@@ -28,7 +28,7 @@ def clock():
         time.sleep(0.02)
         if buttonA.isPressed():
              break
-        if buttonB.isPressed():
+        if buttonС.isPressed():
              break
 
 def but_a():
@@ -44,7 +44,9 @@ def but_b():
    lcd.print('World')
    return()     
 
+lcd.font(lcd.FONT_Comic)
+but_a()
 buttonA.wasPressed(but_a)
-buttonB.wasPressed(but_b)
-buttonC.wasPressed(clock)
+buttonB.wasPressed(clock)
+buttonC.wasPressed(but_b)
 #buttonA.releasedFor(1.2, may_meny_A)
