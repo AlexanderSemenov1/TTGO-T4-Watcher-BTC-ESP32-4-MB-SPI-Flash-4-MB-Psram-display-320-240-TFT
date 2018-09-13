@@ -4,5 +4,7 @@ Sources of information:
 For the display:  https://github.com/loboris/MicroPython_ESP32_psRAM_LoBo/wiki/display 
 Firmware Info:    https://github.com/m5stack/M5Cloud#lcdpolyx-y-r-sides-thick-color-fillcolor-rotate 
 
+![alt text](figures/img.png)
+
 
 
