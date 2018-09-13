@@ -1,3 +1,5 @@
+# Initializing the display, setting up a connection to the wifi network.
+
 from m5stack import lcd, buttonA, buttonB, buttonC
 import network
 import utime
