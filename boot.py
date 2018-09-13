@@ -8,7 +8,7 @@ lcd.orient(3)
 
 sta_if = network.WLAN(network.STA_IF); sta_if.active(True)
 sta_if.scan()                             # Scan for available access points
-sta_if.connect("RT-WiFi_FF68", "XDTRNYDT") # Connect to an AP
+sta_if.connect("login", "password")       # Connect to an AP
 sta_if.isconnected()                      # Check for successful connection
 
 #rez = str(sta_if.ifconfig())
@@ -22,6 +22,6 @@ if not sta_if.isconnected():
 lcd.setCursor(0, 40)
 lcd.setColor()
 lcd.println(str(sta_if.ifconfig()))
-#import test
+
 
 
