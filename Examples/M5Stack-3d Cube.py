@@ -8,6 +8,7 @@ from math import sin, cos
 
 
 lcd.clear()
+lcd.tft_setspeed(80000000)
 lcd.setColor(lcd.BLUE)
 X = const(150)  #  Location 
 Y = const(120)  #   
@@ -51,4 +52,4 @@ while True:
         lcd.line(int(f[3][0]),  int(f[3][1]),  int(f[7][0]),  int(f[7][1]),  1) 
         lcd.line(int(f[1][0]),  int(f[1][1]),  int(f[3][0]),  int(f[3][1]),  1)  
         lcd.line(int(f[0][0]),  int(f[0][1]),  int(f[2][0]),  int(f[2][1]),  1)  
-        sleep_ms(1)
+        sleep_ms(3)
