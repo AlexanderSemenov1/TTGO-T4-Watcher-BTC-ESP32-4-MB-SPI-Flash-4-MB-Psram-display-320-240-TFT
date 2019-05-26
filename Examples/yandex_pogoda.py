@@ -1,3 +1,4 @@
+# Test to download git
 # Пример получения данных о погоде от Яндекс
 # Кабинет разработчика  https://developer.tech.yandex.ru/?from=commercial  в котором нужно получит ключ доступа к API
 import urequests, json
